@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/et_prod_patron" android:layout_width="250.0dip" android:layout_height="wrap_content">
+        <requestFocus />
+    </EditText>
+    <RadioGroup android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:textColor="#ff000000" android:id="@id/ptt_codigo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Codigo" />
+        <RadioButton android:textColor="#ff000000" android:id="@id/ptt_nombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:checked="true" android:text="Nombre" />
+    </RadioGroup>
+</LinearLayout>

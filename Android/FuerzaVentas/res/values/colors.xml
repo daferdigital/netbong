@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="naranja_fuete">#ffff7900</color>
+    <color name="azul_rey">#ff0000ff</color>
+    <color name="blanco">#ffffffff</color>
+    <color name="azul_claro1_fuente">#600000ff</color>
+    <color name="azul_claro2_fuente">#750000ff</color>
+</resources>

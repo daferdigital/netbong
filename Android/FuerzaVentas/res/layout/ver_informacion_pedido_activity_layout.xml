@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe3e7ea" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:id="@id/ly_anular" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/icn_anular" android:layout_width="72.0px" android:layout_height="72.0px" android:src="@drawable/icono_anulacion_documento_64" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Anular" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:id="@id/ly_recuperar" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/icn_recuperar" android:layout_width="72.0px" android:layout_height="72.0px" android:src="@drawable/icono_recuperar_documento_64" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recuperar" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/icn_modificar" android:layout_width="72.0px" android:layout_height="72.0px" android:src="@drawable/icono_modificar_pedido_64" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modificar" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/icn_imprimir" android:layout_width="72.0px" android:layout_height="72.0px" android:src="@drawable/icono_imprimir_64" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Imprimir" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/icn_regresar" android:layout_width="72.0px" android:layout_height="72.0px" android:src="@drawable/icono_regresar_64" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Regresar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <Button android:id="@id/butt_resumen" android:layout_width="250.0px" android:layout_height="wrap_content" android:text="Resumen" />
+            <Button android:id="@id/butt_articulos" android:layout_width="250.0px" android:layout_height="wrap_content" android:text="Articulos" />
+            <Button android:id="@id/butt_eventos" android:layout_width="250.0px" android:layout_height="wrap_content" android:text="Eventos" />
+            <Button android:id="@id/butt_imprimir" android:layout_width="250.0px" android:layout_height="wrap_content" android:text="Impresion" />
+            <Button android:id="@id/butt_sincronizar" android:layout_width="250.0px" android:layout_height="wrap_content" android:text="Sincronizacion" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/contenido"  android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

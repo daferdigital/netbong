@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_concepto" android:layout_width="400.0dip" android:layout_height="wrap_content" android:text="FACT-002 - FACT-002 - FACT-002" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff000000" android:id="@id/tv_comentario" android:layout_width="400.0dip" android:layout_height="wrap_content" android:text="FACT-002" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ff000000" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Concepto" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_saldo" android:layout_width="400.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Bs XXX,yy" />
+    <TextView android:textColor="#ff000000" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Saldo" />
+</LinearLayout>

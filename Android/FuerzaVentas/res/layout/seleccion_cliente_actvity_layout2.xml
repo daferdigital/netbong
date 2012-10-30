@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textSize="20.0px" android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Indique el nombre del cliente" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <Button android:layout_gravity="center" android:id="@id/img_clientes_nuevo" android:background="@drawable/icono_menu_opcion_cliente_agregar" android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+                    <TextView android:textColor="#ff000000" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Agregar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/cview_filtro_campo_texto" />
+    </LinearLayout>
+    <ListView android:id="@id/lv_clientes" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

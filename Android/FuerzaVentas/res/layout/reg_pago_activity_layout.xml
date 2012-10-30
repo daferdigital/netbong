@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="36.0dip" android:textStyle="bold" android:textColor="#ff000000" android:background="@drawable/rectangulo_redondeado_ffffff_b" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:text="Registro de Pagos" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip">
+        <ImageButton android:id="@id/ib_cliente" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icono_cliente_64" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/tv_cliente" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Aqui nombre del cliente" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="550.0dip" android:layout_margin="4.0dip">
+        <ScrollView android:id="@id/scrollView1"  android:layout_width="350.0dip" android:layout_height="fill_parent" android:layout_marginRight="4.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/ly_facturas_pendientes" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+        <include android:id="@id/include1" android:layout_width="400.0dip" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" layout="@layout/reg_pago_captura_datos" />
+        <ScrollView android:id="@id/scrollView1"  android:layout_width="400.0dip" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ly_formas_pago" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="4.0dip">
+        <Button android:layout_gravity="right" android:id="@id/b_registrar_pago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Registar Pago" />
+    </LinearLayout>
+</LinearLayout>

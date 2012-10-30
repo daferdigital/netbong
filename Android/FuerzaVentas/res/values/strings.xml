@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_world">hello world</string>
+    <string name="menu_settings">menu_settings</string>
+    <string name="db_autorizaciones_limite_credito_validar_codigo">select count(*) from autorizaciones_limite_credito where codref_autorizacion_limite_credito = ? and codref_vendedor = ? and codref_cliente = ? and id_pedido = 0</string>
+    <string name="db_autorizaciones_limite_credito_consultar_id">select _id from autorizaciones_limite_credito where codref_autorizacion_limite_credito = ? and codref_vendedor = ? and codref_cliente = ? and id_pedido = 0</string>
+    <string name="db_autorizaciones_precio_query_por_id">select _id, codref_autorizacion_precio, codref_producto, codref_cliente, precio, id_pedido from autorizaciones_precios where _id = ?</string>
+    <string name="db_autorizaciones_precio_query_por_producto_cliente">select _id, codref_autorizacion_precio, codref_producto, codref_cliente, precio, id_pedido from autorizaciones_precios where codref_producto = ? and codref_cliente = ? and id_pedido is null</string>
+    <string name="db_autorizaciones_precio_update_marcar_como_utilizada">update autorizaciones_precios set id_pedido = ? where _id = ?</string>
+    <string name="db_clientes_query_por_id">select c._id as id, c.id_profitplus, c.nombre, c.rif, c.limite_credito, tc._id as id_tipo_cliente, tc.descripcion as descripcion_tipo_cliente , tc.tipo_precio from clientes c, tipos_clientes tc where c._id = ? and c.id_tipo_cliente = tc._id</string>
+    <string name="db_clientes_query_movimientos_resumen_total_saldo">select cast (coalesce(sum(case when incrementa_saldo = 1 then saldo else -saldo end), 0) as text) as saldo_texto from clientes_movimientos_resumen where codref_cliente = ?</string>
+    <string name="db_clientes_query_movimientos_resumen">select codref_cliente, concepto, saldo ,comentario from clientes_movimientos_resumen where codref_cliente = ?</string>
+    <string name="db_clientes_query_movimientos_resumen_restrictivos">select codref_cliente, concepto, saldo ,comentario from clientes_movimientos_resumen where codref_cliente = ? and permite_generar_nuevo_pedido = 0</string>
+    <string name="db_clientes_update_bajar_limite_credito">update clientes set limite_credito = limite_credito - ? where _id = ?</string>
+    <string name="db_clientes_update_subir_limite_credito">update clientes set limite_credito = limite_credito + ? where _id = ?</string>
+    <string name="db_facturas_insert_demo_crear_desde_pedidos_cabecera">"insert into facturas (_id, codref_cliente, codref_factura, fecha, estatus, total) select p._id, c.id_profitplus, 'FACT-' || cast(p._id as text), p.fecha, 0, p.total_excento + p.total_gravament + p.total_iva_gravament from pedidos p, clientes c where p.status = 0 and p.id_cliente = c._id"</string>
+    <string name="db_facturas_insert_demo_crear_desde_pedidos_detalle">"insert into facturas_detalle (id_factura, codref_factura, codref_producto, cantidad, iva, precio, total, total_exento, total_gravament, total_iva_gravament) select ped._id, 'FACT-' || cast(pd.id_pedido as text), pr.id_profitplus, pd.cantidad, pd.iva, pd.precio, pd.total_excento + pd.total_gravament + pd.total_iva_gravament, pd.total_excento, pd.total_gravament, pd.total_iva_gravament from pedidos ped, pedidos_detalle pd, productos pr where ped.status = 0 and ped._id = pd.id_pedido and pd.id_producto = pr._id"</string>
+    <string name="db_facturas_insert_demo_crear_desde_pedidos_eventos">"insert into facturas_eventos(id_factura, codref_factura, fecha, evento) select ped._id, 'FACT-' || cast(ped._id as text), ped.fecha, 'Nueva factura emitida segun pedido: P-' || cast(ped._id as text) from pedidos ped where ped.status = 0"</string>
+    <string name="db_facturas_insert_demo_crear_desde_pedidos_factura_pedido">"insert into facturas_pedidos (id_factura, codref_factura, codref_pedido) select p._id, 'FACT-' || cast(p._id as text), 'P-' || cast(p._id as text) from pedidos p, clientes c where p.status = 0 and p.id_cliente = c._id"</string>
+    <string name="db_facturas_insert_demo_crear_desde_pedidos_cabiar_estatus">update pedidos set status = 3 where status = 0</string>
+    <string name="db_facturas_insert_demo_crear_desde_pedidos_factura_saldo">"insert into facturas_saldos_pendientes (codref_cliente, codref_factura, total_pendiente) select c.id_profitplus, 'FACT-' || cast(p._id as text), p.total_excento + p.total_gravament + p.total_iva_gravament from pedidos p, clientes c where p.status = 0 and p.id_cliente = c._id"</string>
+    <string name="db_pedidos_delete_carrito_cerrar_cabecera">delete from carrito</string>
+    <string name="db_pedidos_delete_carrito_cerrar_detalle">delete from carrito_items</string>
+    <string name="db_pedidos_delete_pedido_detalle">delete from pedidos_detalle where id_pedido = ?</string>
+    <string name="db_pedidos_insert_carrito_agregar_producto">insert into carrito_items( id_producto, precio, cantidad, iva, precio_base, tipo_precio_indicado, id_autorizacion_precio) values(?, ?, ?, ?, ?, ?, ?)</string>
+    <string name="db_pedidos_insert_carrito">insert into carrito(id_cliente) values(?)</string>
+    <string name="db_pedidos_insert_pedido_crear_cabecera">insert into pedidos (id_cliente, fecha, observacion, observacion_pronto_pago, total_excento, total_gravament, total_iva_gravament) select id_cliente, fecha, observaciones, observaciones_pronto_pago, coalesce((select sum(cantidad * precio) from carrito_items where item_eliminado = 0 and iva = 0 ), 0), coalesce((select sum(cantidad * precio) from carrito_items where item_eliminado = 0 and iva > 0 ), 0), coalesce((select sum(cantidad * precio * iva / 100.00) from carrito_items where item_eliminado = 0 and iva > 0 ), 0) from carrito</string>
+    <string name="db_pedidos_insert_pedido_crear_items">insert into pedidos_detalle(id_pedido, id_producto, iva, precio, cantidad, total_excento, total_gravament, total_iva_gravament, precio_base, tipo_precio_indicado, id_autorizacion_precio) select ?, id_producto, iva, precio, cantidad, case when iva = 0 then cantidad * precio else 0 end , case when iva > 0 then cantidad * precio else 0 end , case when iva > 0 then cantidad * precio * iva / 100.00 else 0 end , precio_base, tipo_precio_indicado, id_autorizacion_precio from carrito_items where item_eliminado = 0 and id_producto > 0</string>
+    <string name="db_pedidos_insert_pedido_crear_eventos">"insert into pedidos_eventos(id_pedido, evento) values(?, 'Nuevo Pedido Generado')"</string>
+    <string name="db_pedidos_insert_pedido_agregar_evento">insert into pedidos_eventos(id_pedido, evento) values(?, ?)</string>
+    <string name="db_pedidos_insert_carrito_desde_pedido">insert into carrito( id_cliente, fecha, observaciones, observaciones_pronto_pago, id_cliente_ant, observaciones_ant, observaciones_pronto_pago_ant, id_autorizacion_limite_credito, id_pedido) values(?, ?, ?, ?, ?, ?, ?, (select coalesce(_id, 0) from autorizaciones_limite_credito where id_pedido = ? ), ? )</string>
+    <string name="db_pedidos_insert_carrito_items_desde_pedido">insert into carrito_items( precio, cantidad, iva, id_autorizacion_precio, precio_ant, cantidad_ant, iva_ant, precio_base, tipo_precio_indicado, id_promocion, id_producto, item_nuevo_agregado) select precio, cantidad, iva, id_autorizacion_precio, precio, cantidad, iva, precio_base, tipo_precio_indicado, id_promocion, id_producto, 0 from pedidos_detalle where id_pedido = ?</string>
+    <string name="db_pedidos_query_no_sync">select c._id as clienteId, c.id_profitplus as cliente, c.nombre as clie_nombre, p._id as pedido, date(p.fecha) as fecha, time(p.fecha) as hora, p.total_excento, p.total_gravament, p.total_iva_gravament, p.total_excento + p.total_gravament + p.total_iva_gravament as total_general, p.observacion as observacion, p.observacion_pronto_pago from Pedidos p, Clientes c where p.sync = 0 and p.id_cliente = c._id</string>
+    <string name="db_pedidos_query_pedido">select c._id as clienteId, c.id_profitplus as cliente, c.nombre as clie_nombre, p._id as pedido, date(p.fecha) as fecha, time(p.fecha) as hora, p.total_excento, p.total_gravament, p.total_iva_gravament, p.total_excento + p.total_gravament + p.total_iva_gravament as total_general, p.observacion as observacion, p.observacion_pronto_pago from Pedidos p, Clientes c where p._id = ? and p.id_cliente = c._id</string>
+    <string name="db_pedidos_query_items">select p.id_profitplus as codref_producto, pd.precio, pd.cantidad, pd.iva, pd.total_excento, pd.total_gravament, pd.total_iva_gravament from PedidosDetalle pd, Productos p where pd.id_pedido = ? and pd.id_producto = p._id</string>
+    <string name="db_pedidos_query_eventos">select date(pe.fecha) as fecha, time(pe.fecha) as hora, pe.evento from PedidosEventos pe where pe.id_pedido = ?</string>
+    <string name="db_pedidos_query_carrito_abierto">select count(*) from Carrito_items</string>
+    <string name="db_pedidos_query_carrito_items_por_id_producto">select c.id_producto, c.id_promocion, c.precio_base, c.precio, c.cantidad, c.iva, c.id_autorizacion_precio, c.tipo_precio_indicado, c._id, c.precio_ant, c.cantidad_ant, c.iva_ant, p.id_profitplus as art_cod, p.nombre as art_nombre, p.imagen as art_imagen from carrito_items c, productos p where c.item_eliminado = 0 and c.id_producto = ? and c.id_producto = p._id</string>
+    <string name="db_pedidos_query_carrito_items_por_id_promocion">"select id_producto, id_promocion, precio_base, precio, cantidad, iva, id_autorizacion_precio, tipo_precio_indicado, _id, c.precio_ant, c.cantidad_ant, c.iva_ant, '' as art_cod, '' as art_nombre, '' as art_imagen from carrito_items c where c.item_eliminado = 0 and id_promocion = ?"</string>
+    <string name="db_pedidos_query_carrito_items_productos">select c.id_producto, c.id_promocion, c.precio_base, c.precio, c.cantidad, c.iva, c.id_autorizacion_precio, c.tipo_precio_indicado, c._id, c.precio_ant, c.cantidad_ant, c.iva_ant, p.id_profitplus as art_cod, p.nombre as art_nombre, p.imagen as art_imagen from carrito_items c, productos p where c.item_eliminado = 0 and c.id_producto = p._id</string>
+    <string name="db_pedidos_query_carrito_items_promociones">"select c.id_producto, c.id_promocion, c.precio_base, c.precio, c.cantidad, c.iva, c.id_autorizacion_precio, c.tipo_precio_indicado, c._id, '' as art_cod, '' as art_nombre, '' as art_imagen from carrito_items c, promociones p where c.item_eliminado = 0 and c.id_promocion = p._id"</string>
+    <string name="db_pedidos_query_carrito_items_total_bs">select cast(coalesce(sum(cantidad * precio * ( iva / 100.00 + 1)), 0) as text) from carrito_items where item_eliminado = 0</string>
+    <string name="db_pedidos_query_carrito">select _id, id_cliente, fecha, observaciones, observaciones_pronto_pago, id_autorizacion_limite_credito, id_pedido from carrito</string>
+    <string name="db_pedidos_query_carrito_cliente_actual">select clie.nombre from carrito c, clientes clie where c.id_cliente = clie._id</string>
+    <string name="db_pedidos_query_carrito_cliente_anterior">select clie.nombre from carrito c, clientes clie where c.id_cliente_ant = clie._id</string>
+    <string name="db_pedidos_query_carrito_modificado_cliente">select count(*) from carrito where id_cliente &lt;> id_cliente_ant</string>
+    <string name="db_pedidos_query_carrito_modificado_observacion">"select count(*) from carrito where coalesce(observaciones, '') &lt;> observaciones_ant"</string>
+    <string name="db_pedidos_query_carrito_modificado_observacion_pronto_pago">"select count(*) from carrito where coalesce(observaciones_pronto_pago, '') &lt;> observaciones_pronto_pago_ant"</string>
+    <string name="db_pedidos_query_carrito_observacion_actual">select observaciones from carrito</string>
+    <string name="db_pedidos_query_carrito_observacion_anterior">select observaciones_ant from carrito</string>
+    <string name="db_pedidos_query_carrito_observacion_pronto_pago_actual">select observaciones_pronto_pago from carrito</string>
+    <string name="db_pedidos_query_carrito_observacion_pronto_pago_anterior">select observaciones_pronto_pago_ant from carrito</string>
+    <string name="db_pedidos_query_carrito_total_anterior">select cast(coalesce(sum(cantidad_ant * precio_ant * ( iva_ant / 100.00 + 1)), 0) as text) from carrito_items where item_eliminado = 0</string>
+    <string name="db_pedidos_update_carrito_modificar_datos_item">update carrito_items set precio = ?, cantidad = ?, iva = ?, tipo_precio_indicado = ?, id_autorizacion_precio = ? where _id = ?</string>
+    <string name="db_pedidos_update_carrito_eliminar_item">update carrito_items set item_eliminado = 1 where _id = ? and item_eliminado = 0</string>
+    <string name="db_pedidos_update_carrito_cliente">update carrito set id_cliente = ?</string>
+    <string name="db_pedidos_update_carrito_observacion">update carrito set observaciones = ?</string>
+    <string name="db_pedidos_update_carrito_observacion_pp">update carrito set observaciones_pronto_pago = ?</string>
+    <string name="db_pedidos_update_pedido_modificar_cabecera">update pedidos set id_cliente = ?, observacion = ?, observacion_pronto_pago = ? , total_excento = coalesce((select sum(cantidad * precio) from carrito_items where item_eliminado = 0 and iva = 0 ), 0), total_gravament = coalesce((select sum(cantidad * precio) from carrito_items where item_eliminado = 0 and iva > 0 ), 0), total_iva_gravament = coalesce((select sum(cantidad * precio * iva / 100.00) from carrito_items where item_eliminado = 0 and iva > 0 ), 0) where _id = ?</string>
+    <string name="db_pedidos_update_carrito_autorizacion_limite_credito">update carrito set id_autorizacion_limite_credito = ?</string>
+    <string name="db_productos_query_catalogo_vendedor">SELECT p.stock, p._id, p.id_profitplus, p.nombre, p.precio1 as precio_base, p.imagen, p.iva, p.activo, mp.marca, mp.imagen as imagen_marca, p.precio1, p.precio2, p.precio3, p.precio4, p.precio5 FROM vendedor_x_linea vxl, productos_x_lineas pxl, Productos p, Marcas_Producto mp WHERE vxl.id_linea = pxl.id_linea and pxl.id_producto = p._id and p.id_marca_producto = mp._id ORDER BY p.nombre</string>
+    <string name="db_productos_query_catalogo_vendedor_por_linea">SELECT p.stock, p._id, p.id_profitplus, p.nombre, p.precio1 as precio_base, p.imagen, p.iva, p.activo, mp.marca, mp.imagen as imagen_marca, p.precio1, p.precio2, p.precio3, p.precio4, p.precio5 FROM vendedor_x_linea vxl, productos_x_lineas pxl, Productos p, Marcas_Producto mp WHERE vxl.id_linea in ? and vxl.id_linea = pxl.id_linea and pxl.id_producto = p._id and p.id_marca_producto = mp._id ORDER BY p.nombre</string>
+    <string name="db_productos_query_catalogo_vendedor_por_patron_nombre">SELECT p.stock, p._id, p.id_profitplus, p.nombre, p.precio1 as precio_base, p.imagen, p.iva, p.activo, mp.marca, mp.imagen as imagen_marca, p.precio1, p.precio2, p.precio3, p.precio4, p.precio5 FROM vendedor_x_linea vxl, productos_x_lineas pxl, Productos p, Marcas_Producto mp WHERE vxl.id_linea = pxl.id_linea and pxl.id_producto = p._id and p.id_marca_producto = mp._id and like(?, p.nombre) ORDER BY p.nombre</string>
+    <string name="db_productos_query_catalogo_vendedor_por_patron_codigo">SELECT p.stock, p._id, p.id_profitplus, p.nombre, p.precio1 as precio_base, p.imagen, p.iva, p.activo, mp.marca, mp.imagen as imagen_marca, p.precio1, p.precio2, p.precio3, p.precio4, p.precio5 FROM vendedor_x_linea vxl, productos_x_lineas pxl, Productos p, Marcas_Producto mp WHERE vxl.id_linea = pxl.id_linea and pxl.id_producto = p._id and p.id_marca_producto = mp._id and like(?, p.id_profitplus) ORDER BY p.nombre</string>
+    <string name="db_productos_query_por_id">SELECT p.stock, p._id, p.id_profitplus, p.nombre, p.precio1 as precio_base, p.imagen, p.iva, p.activo, mp.marca, mp.imagen as imagen_marca, p.precio1, p.precio2, p.precio3, p.precio4, p.precio5 FROM Productos p, Marcas_Producto mp WHERE p._id = ? and p.id_marca_producto = mp._id</string>
+    <string name="db_productos_query_carrito_producto_existente">existe</string>
+    <string name="db_productos_update_bajar_stock">update productos set stock = stock - ? where _id = ?</string>
+    <string name="db_productos_update_subir_stock">update productos set stock = stock + ? where _id = ?</string>
+    <string name="script_create_table_facturas">"
+    CREATE TABLE Facturas(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_pedido INTEGER, id_cliente INTEGER, documento TEXT, fecha TEXT, status INTEGER, monto_facturado REAL, monto_cancelado REAL);
+    insert into Facturas(id_pedido, id_cliente, documento, fecha, status, monto_facturado, monto_cancelado) values(1, 1, 'AFF0567', '2011-01-01', 0, 1000, 0);        
+    insert into Facturas(id_pedido, id_cliente, documento, fecha, status, monto_facturado, monto_cancelado) values(2, 1, 'AFF0021', '2011-02-01', 0, 2500, 0);
+    insert into Facturas(id_pedido, id_cliente, documento, fecha, status, monto_facturado, monto_cancelado) values(3, 1, 'AFF0987', '2011-03-01', 0, 750, 0);
+    "</string>
+    <string name="script_create_table_facturas_detalle">"
+    CREATE TABLE FacturasDetalle(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_factura INTEGER, id_producto INTEGER, precio REAL, cantidad INTEGER, iva REAL, sub_total REAL);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(1, 1, 600, 2, 0, 200);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(1, 2, 50, 2, 0, 200);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(1, 3, 600, 2, 0, 200);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(2, 4, 35, 2, 0, 200);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(2, 5, 40, 2, 0, 200);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(2, 6, 100, 2, 0, 200);    
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(3, 7, 500, 2, 0, 200);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(3, 8, 700, 2, 0, 200);
+    insert into FacturasDetalle(id_factura, id_producto, precio, cantidad, iva, sub_total) values(3, 9, 124, 2, 0, 200);    
+    "</string>
+    <string name="script_create_table_facturas_eventos">"
+    CREATE TABLE FacturasEventos(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_factura INTEGER, fecha TEXT, evento TEXT);
+    insert into FacturasEventos(id_factura, fecha, evento) values(1, '2011-02-02', 'Aprobada y generada.');
+    insert into FacturasEventos(id_factura, fecha, evento)  values(1, '2011-02-04', 'Revisada.');
+    insert into FacturasEventos(id_factura, fecha, evento)  values(1, '2011-02-10', 'Enviada.');
+    insert into FacturasEventos(id_factura, fecha, evento) values(2, '2011-02-02', 'Por aprobacion.');
+    insert into FacturasEventos(id_factura, fecha, evento)  values(2, '2011-02-04', 'Aprobada.');
+    insert into FacturasEventos(id_factura, fecha, evento)  values(2, '2011-02-10', 'Enviada.');    
+    "</string>
+    <string name="script_create_table_facturas_abonos">"
+    CREATE TABLE FacturasAbonos(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_factura INTEGER, fecha TEXT, monto REAL, tipo INTEGER, id_banco INTEGER, referencia TEXT);
+    "</string>
+    <string name="script_create_table_pedidos">"
+    CREATE TABLE Pedidos(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_cliente INTEGER, fecha TEXT, status INTEGER, total REAL);        
+    "</string>
+    <string name="script_create_table_pedidos_detalle">"
+    CREATE TABLE PedidosDetalle(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_pedido INTEGER, id_producto INTEGER, precio_lista REAL, precio REAL, cantidad INTEGER, iva REAL, sub_total REAL);
+    "</string>
+    <string name="script_create_table_pedidos_eventos">"
+    CREATE TABLE PedidosEventos(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_pedido INTEGER, fecha TEXT, evento TEXT);
+    "</string>
+    <string name="clientes_con_pedidos">"
+\u0009SELECT 
+\u0009\u0009c._id as id, 
+\u0009\u0009c.nombre as nombre, 
+\u0009\u0009sum(case when p.status = 0 then 1 else 0 end) as generado, 
+\u0009\u0009sum(case when p.status = 1 then 1 else 0 end) as anulado,  
+\u0009\u0009sum(case when p.status = 2 then 1 else 0 end) as sincronizado,  
+\u0009\u0009sum(case when p.status = 3 then 1 else 0 end) as facturado  
+\u0009FROM 
+\u0009\u0009Pedidos p, 
+\u0009\u0009Clientes c 
+\u0009WHERE 
+\u0009\u0009p.id_cliente = c._id 
+\u0009GROUP 
+\u0009\u0009BY c.nombre, c._id
+\u0009"</string>
+    <string name="datos_resumen_pedido">"
+\u0009SELECT \u0009\u0009
+\u0009\u0009c.nombre as nombre,
+\u0009\u0009c.rif,
+\u0009\u0009c.direccion_fiscal,
+\u0009\u0009
+\u0009\u0009p.fecha,
+\u0009\u0009case 
+\u0009\u0009\u0009when p.status = 0 then 'Generado' 
+\u0009\u0009\u0009when p.status = 1 then 'Anulado'
+\u0009\u0009\u0009when p.status = 2 then 'Sincronizado'
+\u0009\u0009\u0009when p.status = 3 then 'Facturado'
+\u0009\u0009end as estatus,
+\u0009\u0009
+\u0009\u0009p.total_excento + p.total_gravament + p.total_iva_gravament as total  
+\u0009FROM 
+\u0009\u0009Pedidos p, 
+\u0009\u0009Clientes c 
+\u0009WHERE 
+\u0009\u0009p._id = %d and 
+\u0009\u0009p.id_cliente = c._id
+\u0009"</string>
+    <string name="clientes_con_facturas">"
+\u0009SELECT 
+\u0009\u0009c._id as id, \u0009\u0009
+\u0009\u0009c.nombre as nombre, 
+\u0009\u0009sum(case when p.status = 0 then 1 else 0 end) as pendiente, 
+\u0009\u0009sum(case when p.status = 1 then 1 else 0 end) as anulada,  
+\u0009\u0009sum(case when p.status = 2 then 1 else 0 end) as cancelada\u0009\u0009\u0009\u0009\u0009\u0009\u0009\u0009  
+\u0009FROM 
+\u0009\u0009Facturas p, 
+\u0009\u0009Clientes c 
+\u0009WHERE 
+\u0009\u0009p.id_cliente = c._id 
+\u0009GROUP 
+\u0009\u0009BY c._id, c.nombre
+\u0009"</string>
+    <string name="pedidos_de_cliente">"
+\u0009SELECT 
+\u0009\u0009p._id,
+\u0009\u0009p.fecha, 
+\u0009\u0009total_excento + total_gravament + total_iva_gravament as total,
+\u0009\u0009case 
+\u0009\u0009\u0009when p.status = 0 then 'Generado' 
+\u0009\u0009\u0009when p.status = 1 then 'Anulado'
+\u0009\u0009\u0009when p.status = 2 then 'Sincronizado'
+\u0009\u0009\u0009when p.status = 3 then 'Facturado'\u0009\u0009\u0009\u0009\u0009\u0009\u0009\u0009
+\u0009\u0009\u0009else 'OTRO'
+\u0009\u0009end as status,
+\u0009\u0009
+\u0009\u0009c.nombre as cliente\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Pedidos p,
+\u0009\u0009clientes c 
+\u0009WHERE 
+\u0009    c._id = p.id_cliente and 
+\u0009\u0009p.id_cliente = 
+\u0009"</string>
+    <string name="pedidos_de_cliente_por_nombre">"
+\u0009SELECT 
+\u0009\u0009p._id,
+\u0009\u0009p.fecha, 
+\u0009\u0009total_excento + total_gravament + total_iva_gravament as total,
+\u0009\u0009case 
+\u0009\u0009\u0009when p.status = 0 then 'Generado' 
+\u0009\u0009\u0009when p.status = 1 then 'Anulado'
+\u0009\u0009\u0009when p.status = 2 then 'Sincronizado'
+\u0009\u0009\u0009when p.status = 3 then 'Facturado'\u0009\u0009\u0009
+\u0009\u0009\u0009else 'OTRO'
+\u0009\u0009end as status,
+\u0009\u0009
+\u0009\u0009c.nombre as cliente\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Pedidos p,
+\u0009\u0009clientes c 
+\u0009WHERE\u0009    
+\u0009    like(%s, c.nombre) and  
+\u0009    c._id = p.id_cliente
+\u0009ORDER BY 
+\u0009\u0009c.nombre
+\u0009"</string>
+    <string name="pedidos_efectuados">"
+\u0009SELECT 
+\u0009\u0009p._id,
+\u0009\u0009p.fecha, 
+\u0009\u0009total_excento + total_gravament + total_iva_gravament as total,
+\u0009\u0009case 
+\u0009\u0009\u0009when p.status = 0 then 'Generado' 
+\u0009\u0009\u0009when p.status = 1 then 'Anulado'
+\u0009\u0009\u0009when p.status = 2 then 'Sincronizado'
+\u0009\u0009\u0009when p.status = 3 then 'Facturado'
+\u0009\u0009\u0009\u0009\u0009\u0009
+\u0009\u0009\u0009else 'OTRO'
+\u0009\u0009end as status,
+\u0009\u0009
+\u0009\u0009c.nombre as cliente\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Pedidos p,
+\u0009\u0009clientes c 
+\u0009WHERE
+\u0009\u0009p.sync = 0 and \u0009      
+\u0009    p.id_cliente = c._id 
+\u0009    
+\u0009ORDER BY 
+\u0009\u0009c.nombre
+\u0009"</string>
+    <string name="pedidos_efectuados_criterio">"
+\u0009SELECT 
+\u0009\u0009p._id,
+\u0009\u0009p.fecha, 
+\u0009\u0009total_excento + total_gravament + total_iva_gravament as total,
+\u0009\u0009case 
+\u0009\u0009\u0009when p.status = 0 then 'Generado' 
+\u0009\u0009\u0009when p.status = 1 then 'Anulado'
+\u0009\u0009\u0009when p.status = 2 then 'Sincronizado'
+\u0009\u0009\u0009when p.status = 3 then 'Facturado'\u0009\u0009\u0009
+\u0009\u0009\u0009else 'OTRO'
+\u0009\u0009end as status,
+\u0009\u0009
+\u0009\u0009c.nombre as cliente\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Pedidos p,
+\u0009\u0009clientes c 
+\u0009WHERE\u0009      
+\u0009    c._id = p.id_cliente
+\u0009"</string>
+    <string name="facturas_de_cliente">"
+\u0009SELECT 
+\u0009\u0009_id, 
+\u0009\u0009documento,
+\u0009\u0009id_pedido, 
+\u0009\u0009fecha,  
+\u0009\u0009monto_facturado, 
+\u0009\u0009monto_cancelado,
+\u0009\u0009
+\u0009\u0009case 
+\u0009\u0009\u0009when status = 0 then 'Pendiente'
+\u0009\u0009\u0009when status = 1 then 'Anulada'
+\u0009\u0009\u0009when status = 2 then 'Cancelada'
+\u0009\u0009\u0009else 'OTRO'
+\u0009\u0009end as status\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Facturas 
+\u0009WHERE 
+\u0009\u0009id_cliente = 
+\u0009"</string>
+    <string name="productos_en_pedido">"
+\u0009SELECT 
+\u0009    p._id,
+\u0009\u0009p.nombre,
+\u0009\u0009p.imagen,
+\u0009\u0009pd.precio,
+\u0009\u0009pd.cantidad,
+\u0009\u0009pd.iva,
+\u0009\u0009pd.total_excento + pd.total_gravament + pd.total_iva_gravament as sub_total\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Pedidos_Detalle pd,
+\u0009\u0009Productos p 
+\u0009WHERE 
+\u0009\u0009pd.id_producto = p._id and 
+\u0009\u0009pd.id_pedido = 
+\u0009"</string>
+    <string name="productos_en_factura">"
+\u0009SELECT 
+\u0009\u0009p.nombre,
+\u0009\u0009p.imagen,
+\u0009\u0009pd.precio,
+\u0009\u0009pd.cantidad,
+\u0009\u0009pd.iva,
+\u0009\u0009pd.sub_total\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Facturas_Detalle pd,
+\u0009\u0009Productos p 
+\u0009WHERE 
+\u0009\u0009pd.id_producto = p._id and 
+\u0009\u0009pd.id_factura = 
+\u0009"</string>
+    <string name="eventos_en_pedido">"
+\u0009SELECT 
+\u0009\u0009pe.fecha,
+\u0009\u0009pe.evento\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009Pedidos_Eventos pe
+\u0009WHERE 
+\u0009\u0009pe.id_pedido = 
+\u0009"</string>
+    <string name="eventos_en_factura">"
+\u0009SELECT 
+\u0009\u0009pe.fecha,
+\u0009\u0009pe.evento\u0009\u0009\u0009\u0009
+\u0009FROM 
+\u0009\u0009FacturasEventos pe
+\u0009WHERE 
+\u0009\u0009pe.id_factura = 
+\u0009"</string>
+    <string name="imagenes_de_productos">"
+\u0009SELECT 
+\u0009\u0009imagen,
+\u0009\u0009principal
+\u0009FROM 
+\u0009\u0009Producto_Imagenes
+\u0009WHERE 
+\u0009\u0009id_producto =
+\u0009"</string>
+    <string name="app_name">FuerzaVentas</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"  android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/imagen" android:layout_width="128.0dip" android:layout_height="128.0dip" android:src="@drawable/icon" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/codigo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Codigo articulo" />
+            <TextView android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/nombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre del articulo" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:id="@id/bt_eliminar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Eliminar" />
+    <Button android:id="@id/bt_modificar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Modificar" />
+</LinearLayout>

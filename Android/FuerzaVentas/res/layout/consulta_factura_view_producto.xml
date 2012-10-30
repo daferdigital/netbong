@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="#ff0000ff" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/ivf_producto" android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icon" android:scaleType="fitXY" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="14.0dip" android:textColor="#ff0000ff" android:id="@id/tvf_nombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre Producto" />
+        <TextView android:textSize="12.0dip" android:textColor="#ff0000ff" android:id="@id/tvf_precio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precio Bs XXX.XX" />
+        <TextView android:textSize="12.0dip" android:textColor="#ff0000ff" android:id="@id/tvf_cantidad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cantidad 12" />
+        <TextView android:textSize="12.0dip" android:textColor="#ff0000ff" android:id="@id/tvf_subtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sub Total Bs YYY.YY" />
+    </LinearLayout>
+</LinearLayout>

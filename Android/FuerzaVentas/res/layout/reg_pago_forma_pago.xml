@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#ffffffff" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="#ff000000" android:id="@id/tv_banco" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PROVISION L/C DEPOSITO PREVIO-CORP BANCA" />
+        <LinearLayout android:background="#ffffffff" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="#ff000000" android:id="@id/tv_forma_pago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transferencia: " />
+            <TextView android:textColor="#ff000000" android:id="@id/tv_referencia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="46465-321231-64654" />
+        </LinearLayout>
+        <LinearLayout android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha: " />
+            <TextView android:textColor="#ff000000" android:id="@id/tv_fecha_movimiento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2012-08-19" />
+        </LinearLayout>
+        <LinearLayout android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bs.: " />
+            <TextView android:textColor="#ff000000" android:id="@id/tv_monto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XXX,YY" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="right" android:background="#ffffffff" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/ib_editar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icono_editar_32" />
+            <ImageButton android:id="@id/ib_quitar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icono_cancelar_32" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe3e7ea" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="36.0dip" android:textStyle="bold" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/titulo" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Droid FVM - Menú Principal" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Button android:id="@id/button_configuracion" android:background="@drawable/icono_configuracion_64" android:layout_width="92.0dip" android:layout_height="92.0dip" />
+                    <TextView android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Config." />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Button android:id="@id/button_salir" android:background="@drawable/icono_salir_64" android:layout_width="92.0dip" android:layout_height="92.0dip" />
+                    <TextView android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Salir" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/contenido" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:id="@id/opciones" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:id="@id/img_crear_pedido_lkn"  android:layout_width="350.0dip" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_gravity="top" android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icono_menu_opcion_pedidos" />
+                    <TextView android:textSize="24.0dip" android:textColor="#ffff7900" android:layout_gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manejo de Pedidos" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:id="@id/img_consultar_facturas_lkn"  android:layout_width="350.0dip" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icono_menu_opcion_facturas" android:scaleType="fitXY" />
+                    <TextView android:textSize="24.0dip" android:textColor="#ffff7900" android:layout_gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manejo de Facturas" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:id="@id/img_sync_lnk"  android:layout_width="350.0dip" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icono_menu_opcion_sync" android:scaleType="fitXY" />
+                    <TextView android:textSize="24.0dip" android:textColor="#ffff7900" android:layout_gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Operaciones Sync" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:id="@id/img_clientes_lnk"  android:layout_width="350.0dip" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icono_menu_opcion_clientes" />
+                    <TextView android:textSize="24.0dip" android:textColor="#ffff7900" android:layout_gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mis Clientes" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:id="@id/img_productos_lnk"  android:layout_width="350.0dip" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icono_menu_opcion_productos" />
+                    <TextView android:textSize="24.0dip" android:textColor="#ffff7900" android:layout_gravity="center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mis Productos" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/sub_opciones" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:background="#ffffffff" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Aplicación desarrollada por NetBong, C.A – www.netbong.com ®Derechos Reservados" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

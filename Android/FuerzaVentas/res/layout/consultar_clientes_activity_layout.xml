@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe3e7ea"
+    android:orientation="vertical"
+    android:padding="4.0dip" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4.0dip"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="4.0dip"
+            android:text="Cliente:"
+            android:textColor="#ff000000"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@id/ed_filtro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:textColor="@color/azul_claro2_fuente" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <ListView
+        android:id="@id/lv_clientes"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_margin="4.0dip" 
+        
+        />
+
+</LinearLayout>

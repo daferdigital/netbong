@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe3e7ea" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="36.0dip" android:textStyle="bold" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/titulo" android:background="#ffffffff" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Operaciones de Sincronizacion" />
+    <TextView android:textSize="24.0dip" android:textColor="#ff000000" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pendientes por Enviar:" />
+    <LinearLayout android:orientation="vertical" android:id="@id/contenedor_enviar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="24.0dip" android:textColor="#ff000000" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pendientes por Recibir:" />
+    <LinearLayout android:orientation="vertical" android:id="@id/contenedor_recibir" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="bottom" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/cview_accion_boton_ok_cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

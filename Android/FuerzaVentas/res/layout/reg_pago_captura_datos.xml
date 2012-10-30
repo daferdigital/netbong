@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_banco" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Banco seleccionado" />
+    <EditText android:id="@id/et_banco" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <requestFocus />
+    </EditText>
+    <TextView android:textColor="#ff000000" android:id="@id/textView1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Bancos" />
+    <ListView android:id="@id/lv_bancos" android:layout_width="fill_parent" android:layout_height="120.0dip" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/rectangulo_redondeado_negro" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioGroup android:orientation="horizontal" android:id="@id/radioGroup1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textColor="#ff000000" android:id="@id/r_cheque" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cheque" />
+            <RadioButton android:textColor="#ff000000" android:id="@id/r_deposito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Deposito" />
+            <RadioButton android:textColor="#ff000000" android:id="@id/r_transferencia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Transferencia" />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView android:textColor="#ff000000" android:id="@id/textView2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Forma" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/rectangulo_redondeado_negro" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <EditText android:id="@id/et_referencia" android:layout_width="220.0dip" android:layout_height="wrap_content" />
+            <TextView android:textColor="#ff000000" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Referencia" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip">
+            <ImageButton android:layout_gravity="center" android:id="@id/iv_fecha_movimiento" android:background="@drawable/icono_indicar_fecha_64" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/tv_fecha_movimiento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2012-08-19" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/rectangulo_redondeado_negro" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+    <EditText android:id="@id/et_monto_forma" android:layout_width="300.0dip" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+    <TextView android:textColor="#ff000000" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Monto Bs." />
+    <Button android:id="@id/b_agregar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Agregar Forma Pago" />
+</LinearLayout>

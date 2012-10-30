@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_factura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FACT-002" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ff000000" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Factura" />
+    <EditText android:id="@id/et_comprobante" android:layout_width="250.0dip" android:layout_height="wrap_content">
+        <requestFocus />
+    </EditText>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_iva_fact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bs XXX,yy" />
+            <TextView android:textColor="#ff000000" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IVA Facturado" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_iva_retenido" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bs XXX,yy" />
+            <TextView android:textColor="#ff000000" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Iva retenido (75%)" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/horizontalScrollView1" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:enabled="false" android:typeface="monospace" android:orientation="vertical" android:id="@id/tv_printpreview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="PRUEBAS" android:inputType="textMultiLine" />
+    </ScrollView>
+</LinearLayout>

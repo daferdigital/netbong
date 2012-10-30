@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blanco" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_img" android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icono_carrito" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textColor="#ff000000" android:id="@id/t_precio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre" />
+            <TextView android:textColor="#ff000000" android:id="@id/t_cantidad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre" />
+            <TextView android:textColor="#ff000000" android:id="@id/t_iva" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre" />
+            <TextView android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="right" android:id="@id/t_subtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textStyle="bold" android:textColor="#ff000000" android:id="@id/descrip_producto" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Nombre del producto" android:maxLines="2" />
+</LinearLayout>

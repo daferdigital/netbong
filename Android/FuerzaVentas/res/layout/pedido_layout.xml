@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe3e7ea" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout  android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Gallery android:layout_gravity="center_vertical" android:id="@id/gallery_promo" android:layout_width="100.0dip" android:layout_height="wrap_content" />
+        <include android:layout_gravity="center_vertical" layout="@layout/pedido_toolbar_campo_filtro" />
+        <include layout="@layout/pedido_toolbar" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/subtitulo"  android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Cliente: No-indicado" />
+        <TextView android:textSize="28.0dip" android:textStyle="bold" android:textColor="#ffff0000" android:ellipsize="end" android:id="@id/limite_credito" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Limite de Credito Excedido" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/contenido" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include layout="@layout/pedido_carrito" />
+        <ListView android:scrollbarThumbVertical="@drawable/scroll_thumb_32" android:id="@id/lv_catalogo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/pedido_observacion" />
+    </LinearLayout>
+</LinearLayout>

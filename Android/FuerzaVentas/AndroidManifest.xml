@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" android:installLocation="preferExternal" package="com.netbong"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="16" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application android:label="@string/app_name" android:icon="@drawable/logo_icon" android:debuggable="false" android:theme="@android:style/Theme.Holo">
+        <activity android:label="@string/app_name" android:name="com.netbong.fuerza.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.PedidoVerDetallePromocion"          android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.PedidoCreacion"             android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.DetalleCarrito"             android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.OpcionesMenuPrincial"               android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.PedidosEfectuados"          android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.FacturasGeneradas"         android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.clientes.FichaCliente"              android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.clientes.ConsultarClientes"         android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.catalogo.CatalogoProductos"         android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.PedidoResumen"              android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.util.DeviceListActivity"            android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.RegistrarCancelaciones"    android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.catalogo.CatalogoProductosDetalle"  android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.ModificarEliminarArticulo"  android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.conf.Configuracion"                 android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.sync.SyncActivity"                  android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.conf.EstablecerContrasena"          android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.dialogos.DialogoSiNo"               android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.dialogos.DialogoAceptar"            android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.dialogos.DialogoCapturaTexto"       android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.SeleccionarFecha"          android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.PagosRegistrados"          android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.DevolucionRegistrarNuevo"  android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.PagosVistaImpresa"         android:screenOrientation="portrait" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.PedidoSeleccionProducto"    android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.clientes.SeleccionarCliente"        android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.PedidoModificacion"         android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible" />    
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.PagosRegistrarComprobante" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.SeleccionarBanco"          android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.PedidosEfectuadosFiltro"    android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.FacturaResumen"            android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.FacturasGeneradasFiltro"   android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.pedidos.SeleccionarLineaProducto"   android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.AutenticacionCuenta"                android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerza.facturas.PagosRegistrarNuevo"       android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:theme="@android:style/Theme.Holo" android:name="com.netbong.fuerzapedidos.PedidoCreacionModiicarEliminarItem" android:screenOrientation="portrait" />
+        </application>
+</manifest>

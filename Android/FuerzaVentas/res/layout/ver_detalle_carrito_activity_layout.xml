@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe3e7ea" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:id="@id/opc_imprimir" android:padding="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_imprimir" android:layout_width="92.0dip" android:layout_height="92.0dip" android:src="@drawable/icono_imprimir" android:scaleType="fitXY" />
+                <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Imprimir" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textSize="36.0px" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center_horizontal" android:layout_width="300.0px" android:layout_height="wrap_content" android:text="Artículos Agregados" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:paddingRight="20.0px" android:paddingBottom="20.0px" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:textSize="20.0px" android:textStyle="bold" android:textColor="#ff000000" android:gravity="right" android:id="@id/t_exento" android:visibility="visible" android:layout_width="300.0px" android:layout_height="fill_parent" android:text="Total Exento:" />
+                    <TextView android:textSize="20.0px" android:textStyle="bold" android:textColor="#ff000000" android:gravity="right" android:id="@id/t_iva" android:visibility="visible" android:layout_width="300.0px" android:layout_height="fill_parent" android:text="Total IVA:" />
+                    <TextView android:textSize="20.0px" android:textStyle="bold" android:textColor="#ff000000" android:gravity="right" android:id="@id/t_" android:layout_width="300.0px" android:layout_height="fill_parent" android:text="Total:" />
+                    <TextView android:textSize="28.0px" android:textStyle="bold" android:textColor="#ffff0000" android:gravity="right" android:id="@id/t_limite_excedito" android:visibility="gone" android:layout_width="300.0px" android:layout_height="fill_parent" android:layout_marginTop="40.0dip" android:text="Limite de Credito Excedido" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ListView android:id="@id/lv_articulos_carrito"  android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" />
+    </LinearLayout>
+</LinearLayout>

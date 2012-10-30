@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/rectangulo_azul" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/titulo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Facturacion - Aplicacion de Abonos." />
+    <TextView android:textSize="10.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/subtitulo" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Abonos" />
+    <LinearLayout android:orientation="vertical" android:id="@id/contenido" android:background="@drawable/rectangulo_redondeado_blanco" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RadioGroup android:id="@id/rg_bancos" android:background="@drawable/rectangulo_redondeado_azul" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/rb_banesco" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="Banesco" />
+            <RadioButton android:id="@id/rb_provincial" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Provincial" />
+            <RadioButton android:id="@id/rb_Mercantil" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Mercantil" />
+        </RadioGroup>
+        <RadioGroup android:id="@id/rg_tipo_abono" android:background="@drawable/rectangulo_redondeado_azul_claro" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/rb_cheque" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="Cheque" />
+            <RadioButton android:id="@id/rb_deposito" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Deposito" />
+            <RadioButton android:id="@id/rb_transferencia" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Transferencia" />
+        </RadioGroup>
+        <TextView android:id="@id/textView1" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monto Abono:" />
+        <EditText android:id="@id/et_monto" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:inputType="numberDecimal" />
+        <TextView android:id="@id/textView2" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Referencia:" />
+        <EditText android:id="@id/et_referencia" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:inputType="text" />
+        <LinearLayout android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <Button android:id="@id/button_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancelar" />
+            <Button android:id="@id/button_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aceptar" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

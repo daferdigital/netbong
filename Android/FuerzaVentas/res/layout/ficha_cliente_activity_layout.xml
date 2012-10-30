@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe3e7ea" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="36.0dip" android:textStyle="bold" android:textColor="#ff000000" android:background="@drawable/rectangulo_redondeado_ffffff_b" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ficha del Cliente" />
+    <LinearLayout android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <Button android:id="@id/butt_datos" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="Datos" />
+            <Button android:id="@id/butt_soportes" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="Soporte Fisico" />
+            <Button android:enabled="true" android:id="@id/butt_documentos" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="Documentos Digitales" />
+            <Button android:id="@id/butt_movimientos_resumen" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="Movimientos / Resumen" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <Button android:id="@id/butt_guardar" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="Guardar Cambios - Vista Actual" />
+                    <Button android:id="@id/butt_cerrar" android:visibility="gone" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="Cerrar" />
+                    <Button android:id="@id/butt_seleccionar_continuar" android:visibility="gone" android:layout_width="250.0dip" android:layout_height="wrap_content" android:text="Seleccionar y Continuar" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/contenido"  android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/factura_frame" android:background="@drawable/rectangulo_redondeado_blanco" android:layout_width="240.0dip" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/naranja_fuete" android:id="@id/tv_factura_estatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pedido 00001 [Facturado]" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/azul_rey" android:id="@id/tv_factura_fecha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Generado en: 22-01-2010" android:maxLines="2" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/azul_rey" android:id="@id/tv_factura_subtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Por el monto de: Bs. XXX.XX" android:maxLines="2" />
+    </LinearLayout>
+</LinearLayout>

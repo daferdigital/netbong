@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ly_observacion" android:background="#ffe3e7ea" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="40.0dip" android:textStyle="bold" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Observacion:" />
+    <LinearLayout android:id="@id/ly_et_observacio"  android:layout_width="fill_parent" android:layout_height="300.0dip" android:layout_marginTop="40.0dip" android:layout_marginBottom="40.0dip">
+        <EditText android:textSize="28.0dip" android:textColor="#ff000000" android:id="@id/et_observacion" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:maxLines="4" android:inputType="textMultiLine">
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    <include layout="@layout/campo_ok_cancel" />
+</LinearLayout>

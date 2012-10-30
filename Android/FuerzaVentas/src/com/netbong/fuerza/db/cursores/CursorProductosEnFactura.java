@@ -1,0 +1,90 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+
+package com.netbong.fuerza.db.cursores;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.*;
+import android.os.Environment;
+
+import com.netbong.fuerza.MainActivity;
+
+public class CursorProductosEnFactura extends SQLiteCursor
+{
+    private static class Factory
+        implements android.database.sqlite.SQLiteDatabase.CursorFactory
+    {
+
+        public Cursor newCursor(SQLiteDatabase sqlitedatabase, SQLiteCursorDriver sqlitecursordriver, String s, SQLiteQuery sqlitequery)
+        {
+            return new CursorProductosEnFactura(sqlitedatabase, sqlitecursordriver, s, sqlitequery, null);
+        }
+
+        private Factory()
+        {
+        }
+
+        Factory(Factory factory)
+        {
+            this();
+        }
+    }
+
+
+    private CursorProductosEnFactura(SQLiteDatabase sqlitedatabase, SQLiteCursorDriver sqlitecursordriver, String s, SQLiteQuery sqlitequery)
+    {
+        super(sqlitedatabase, sqlitecursordriver, s, sqlitequery);
+    }
+
+    CursorProductosEnFactura(SQLiteDatabase sqlitedatabase, SQLiteCursorDriver sqlitecursordriver, String s, SQLiteQuery sqlitequery, CursorProductosEnFactura cursorproductosenfactura)
+    {
+        this(sqlitedatabase, sqlitecursordriver, s, sqlitequery);
+    }
+
+    public static CursorProductosEnFactura getProductos(SQLiteDatabase sqlitedatabase, int i)
+    {
+        String s = (new StringBuilder(String.valueOf(MainActivity.mainCtx.getString(0x7f050050)))).append(Integer.toString(i)).toString();
+        CursorProductosEnFactura cursorproductosenfactura = (CursorProductosEnFactura)sqlitedatabase.rawQueryWithFactory(new Factory(null), s, null, null);
+        cursorproductosenfactura.moveToFirst();
+        return cursorproductosenfactura;
+    }
+
+    public int getCantidad()
+    {
+        return getInt(getColumnIndexOrThrow("cantidad"));
+    }
+
+    public String getImagen()
+    {
+        return (new StringBuilder()).append(Environment.getExternalStorageDirectory()).append("/").append("droidsf").append("/").append(getString(getColumnIndexOrThrow("imagen"))).toString();
+    }
+
+    public int getIva()
+    {
+        return getInt(getColumnIndexOrThrow("iva"));
+    }
+
+    public String getNombre()
+    {
+        return getString(getColumnIndexOrThrow("nombre"));
+    }
+
+    public int getPrecio()
+    {
+        return getInt(getColumnIndexOrThrow("precio"));
+    }
+
+    public int getSubTotal()
+    {
+        return getInt(getColumnIndexOrThrow("sub_total"));
+    }
+
+    public static final String COLUMNA_CANTIDAD = "cantidad";
+    public static final String COLUMNA_IMAGEN = "imagen";
+    public static final String COLUMNA_IVA = "iva";
+    public static final String COLUMNA_NOMBRE = "nombre";
+    public static final String COLUMNA_PRECIO = "precio";
+    public static final String COLUMNA_SUB_TOTAL = "sub_total";
+}

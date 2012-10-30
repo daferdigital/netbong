@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/opcs_clientes" android:background="@drawable/rectangulo_redondeado_ffffff_b" android:padding="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:layout_gravity="center" android:id="@id/img_clientes_nuevo" android:background="@drawable/icono_menu_opcion_cliente_agregar" android:padding="10.0dip" android:layout_width="120.0dip" android:layout_height="120.0dip" />
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Agregar" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:layout_gravity="center" android:id="@id/img_clientes_todos" android:background="@drawable/icono_menu_opcion_clientes" android:padding="10.0dip" android:layout_width="120.0dip" android:layout_height="120.0dip" />
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ver Todos" />
+    </LinearLayout>
+</LinearLayout>
