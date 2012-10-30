@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffe3e7ea" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/factura_resumen_area_opciones" />
+    <LinearLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:id="@id/horizontalScrollView1" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ly_datos_factura"  android:padding="10.0dip" android:layout_width="400.0dip" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" />
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@id/ly_eventos"  android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" />
+    </LinearLayout>
+</LinearLayout>

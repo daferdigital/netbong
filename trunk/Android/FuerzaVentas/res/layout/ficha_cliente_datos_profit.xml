@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="24.0dip" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cliente:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_cliente" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="24.0dip" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RIF:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_rif" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="24.0dip" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Direccion Fiscal:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_dir_fiscal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:lines="3" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="24.0dip" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enviar mercancia a la direccion:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_dir_mercancia" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:lines="3" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contacto - Nombre:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_contacto_nombre" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:lines="2" />
+        <TextView android:textSize="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contacto - Telefono:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_contacto_telef" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:lines="2" />
+        <TextView android:textSize="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contacto - Fax:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_contacto_fax" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:lines="2" />
+        <TextView android:textSize="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contacto - Correo:" />
+        <EditText android:enabled="false" android:textColor="#ff000000" android:id="@id/et_contacto_correo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:lines="2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="24.0dip" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dias de Caja:" />
+        <LinearLayout android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <CheckBox android:enabled="false" android:textColor="#ff000000" android:id="@id/check_lunes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lunes" />
+            <CheckBox android:enabled="false" android:textColor="#ff000000" android:id="@id/check_martes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Martes" />
+            <CheckBox android:enabled="false" android:textColor="#ff000000" android:id="@id/check_miercoles" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Miercoles" />
+            <CheckBox android:enabled="false" android:textColor="#ff000000" android:id="@id/check_jueves" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jueves" />
+            <CheckBox android:enabled="false" android:textColor="#ff000000" android:id="@id/check_viernes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Viernes" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

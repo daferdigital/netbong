@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="30.0px" android:textStyle="bold" android:textColor="#ff000000" android:id="@id/nombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre Cliente" />
+    <TextView android:textSize="30.0px" android:textStyle="bold" android:textColor="#ff000000" android:id="@id/rif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rif" />
+    <TextView android:textSize="30.0px" android:textStyle="bold" android:textColor="#ff000000" android:id="@id/dir" android:paddingBottom="20.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Direccion" />
+    <TextView android:textSize="24.0px" android:textColor="#ff000000" android:id="@id/fecha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha" />
+    <TextView android:textSize="24.0px" android:textColor="#ff000000" android:id="@id/estatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estatus" />
+    <TextView android:textSize="24.0px" android:textColor="#ff000000" android:id="@id/monto" android:paddingBottom="20.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monto Total: Bs." />
+    <TextView android:textSize="24.0px" android:textColor="#ff000000" android:id="@id/evento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ultimo Evento Conocido:" />
+    <TextView android:textSize="24.0px" android:textColor="#ff000000" android:id="@id/abono" android:paddingBottom="20.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ultimo Movimiento de abono efectuado:" />
+    <TextView android:textSize="24.0px" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Observaciones:" />
+    <TextView android:textSize="24.0px" android:textColor="#ff000000" android:id="@id/observacion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-Sin Observaciones-" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/catalogoFila1" android:padding="4.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:orientation="vertical" android:id="@id/catalogoFila2" android:padding="4.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:orientation="vertical" android:id="@id/catalogoFila3" android:padding="4.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:orientation="vertical" android:id="@id/catalogoFila4" android:padding="4.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:orientation="vertical" android:id="@id/catalogoFila5" android:padding="4.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

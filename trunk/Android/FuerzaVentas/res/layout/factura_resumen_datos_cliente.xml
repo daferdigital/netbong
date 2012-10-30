@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_rif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="J0000" />
+    <TextView android:textColor="#ff000000" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RIF" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_razon_social" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Nombre del Cliente" />
+    <TextView android:textColor="#ff000000" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Razon Social" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_direccion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="La Direccion del Cliente super alejao del cmino que no se puede llegar ni en mula por lo complicado que es" />
+    <TextView android:textColor="#ff000000" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Direccion" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/rectangulo_redondeado_negro" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+</LinearLayout>

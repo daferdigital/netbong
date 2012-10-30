@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="26.0dip" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Documentos Fisicos Obtenidos del Cliente:" />
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <CheckBox android:textColor="#ff000000" android:id="@id/reg_mercantil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Registro Mercantil" />
+        <CheckBox android:textColor="#ff000000" android:id="@id/copia_rif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Copia del documento RIF" />
+        <CheckBox android:textColor="#ff000000" android:id="@id/copia_ci" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Copia de la cedula de identidad" />
+        <CheckBox android:textColor="#ff000000" android:id="@id/ref_comercial" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Referencias comerciales" />
+        <CheckBox android:textColor="#ff000000" android:id="@id/ref_bancaria" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Referencias bancarias" />
+    </LinearLayout>
+    <TextView android:textSize="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Observaciones/ Comentarios:" />
+    <EditText android:textColor="#ff000000" android:id="@id/tv_observaciones" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4" android:lines="4" />
+</LinearLayout>

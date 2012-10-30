@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="right" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:id="@id/ly_seleccion_cliente" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_seleccion_cliente" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_seleccionar_cliente" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  Selecc. Cliente  " />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_filtrar_catalogo" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_seleccionar_linea_producto" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  Filtrar Catalogo  " />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_promos" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_promociones" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Promos" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_ver_carrito" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_carrito" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ver Carrito" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_crear_observacion" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_observacion" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Observacion" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_ver_ficha_cliente" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_ficha_cliente_2_64" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ficha Cliente" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ly_limite_credito_autorizacion" android:padding="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_limite_credito_autorizacion" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_autorizacion_2_64" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Autorizacion" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_cerrar_pedido" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/icono_cerrar_pedido" android:scaleType="fitXY" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  Guardar Pedid.  " />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

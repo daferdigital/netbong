@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#ffffffff" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv" android:layout_width="340.0dip" android:layout_height="340.0dip" android:src="@drawable/icon" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/bt_eliminar" android:layout_width="200.0dip" android:layout_height="wrap_content" android:text="Eliminar" />
+        <Button android:id="@id/bt_modificar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Modificar" />
+    </LinearLayout>
+</LinearLayout>

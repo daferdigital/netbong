@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/rectangulo_rojo" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@drawable/rectangulo_blanco" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/imageView1" android:layout_width="220.0dip" android:layout_height="100.0dip" android:src="@drawable/logo" android:scaleType="fitXY" />
+    </LinearLayout>
+    <TextView android:textSize="28.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/titulo" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Autenticación de Usuario." />
+    <TextView android:textSize="24.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/subtitulo" android:paddingLeft="20.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Grupo Catalina - Droid SF" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/contenido" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@android:color/background_dark" android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Usuario" />
+            <EditText android:id="@id/et_usuario" android:layout_width="300.0px" android:layout_height="wrap_content" android:text="CHcomput" android:lines="1" />
+            <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@android:color/background_dark" android:id="@id/TextView02" android:paddingTop="10.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contraseña" />
+            <EditText android:id="@id/et_passwd" android:layout_width="300.0px" android:layout_height="wrap_content" android:text="" android:lines="1" android:password="true" />
+            <Button android:id="@id/ButtonEmpezar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Empezar" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="right" android:id="@id/imageView2" android:background="@drawable/rectangulo_redondeado_blanco" android:padding="6.0dip" android:layout_width="340.0dip" android:layout_height="180.0dip" android:src="@drawable/colage_productos" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

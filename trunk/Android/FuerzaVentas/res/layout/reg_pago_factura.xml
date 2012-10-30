@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="#ffffffff" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textColor="#ff000000" android:id="@id/ckb_factura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="#ff000000" android:id="@id/tv_factura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FACTURA NUMERO" />
+        <TextView android:textColor="#ff000000" android:id="@id/tv_fecha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha: 01-02-2011" />
+        <TextView android:textColor="#ff000000" android:id="@id/tv_monto_facturado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Facturado Bs.: XXX,YY" />
+        <TextView android:textColor="#ff000000" android:id="@id/tv_monto_pendiente" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" * Pendiente Bs.: XX,YY" />
+        <TextView android:textColor="#ff000000" android:id="@id/tv_retencion_iva" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" * Ret IVA (75%) Bs.: XXX,yy" />
+    </LinearLayout>
+    <EditText android:enabled="false" android:layout_gravity="bottom" android:id="@id/et_monto_pagar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:inputType="numberDecimal" />
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe3e7ea"
+    android:padding="10.0dip" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:layout_marginRight="10.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/AppTheme"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="Lineas"
+                    android:textColor="#ff000000"
+                    android:textSize="20.0dip"
+                    android:textStyle="bold" />
+
+                <ListView
+                    android:id="@id/lv_lineas"
+                    style="@style/AppTheme"
+                    android:layout_width="782dp"
+                    android:layout_height="195dp"
+                     >
+
+                </ListView>
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+    
+
+                <TextView
+                    android:id="@id/tv_linea_seleccionada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20.0dip"
+                    android:text="Lineas de Productos Seleccionado"
+                    android:textColor="#ff000000"
+                    android:textSize="20.0dip"
+                    android:textStyle="bold" />
+
+                
+          
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        
+        <ListView
+            android:id="@id/lv_catalogo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbarStyle="outsideOverlay" >
+
+                </ListView>
+        </TableRow>
+
+   
+        
+        </TableLayout>
+
+</LinearLayout>

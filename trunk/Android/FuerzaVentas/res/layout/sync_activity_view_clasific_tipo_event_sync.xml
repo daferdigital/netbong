@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textColor="#ff000000" android:id="@id/titulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Actualizacion de Maestros" />
+    <TextView android:textColor="#ff000000" android:id="@id/descripcion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:text="(56 elementos pendientes por sincronizar.)" />
+</LinearLayout>

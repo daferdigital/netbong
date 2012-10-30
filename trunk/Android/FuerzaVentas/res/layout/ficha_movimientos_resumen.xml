@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15.0dip" >
+
+    <TextView
+        android:id="@id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:text="Movimientos Resumen del Cliente"
+        android:textSize="26.0dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@id/tv_total_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bs.: XXX,yy"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#ff000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo Total."
+        android:textColor="#ff000000" />
+
+    <LinearLayout
+        android:id="@id/ly_movimientos_resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:orientation="vertical" />
+
+</LinearLayout>

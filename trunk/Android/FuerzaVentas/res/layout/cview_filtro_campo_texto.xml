@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center_vertical" android:id="@id/bt_filtrar" android:background="@drawable/icono_buscar_128" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <EditText android:textColor="#ff000000" android:id="@id/ed_filtro"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:lines="1" />
+</LinearLayout>

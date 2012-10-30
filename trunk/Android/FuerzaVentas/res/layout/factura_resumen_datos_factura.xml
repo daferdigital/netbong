@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/tv_factura_cliente_codigo" android:layout_width="400.0dip" android:layout_height="wrap_content" android:text="" android:lines="1" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/tv_factura_cliente" android:layout_width="400.0dip" android:layout_height="wrap_content" android:text="" android:lines="1" />
+        <TextView android:textColor="#ff000000" android:id="@id/textView6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cliente" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_factura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FACT00ADC" />
+            <TextView android:textColor="#ff000000" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Factura" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_fecha_factura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="2012-04-15" />
+            <TextView android:textColor="#ff000000" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha Facturacion" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_estatus_factura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pendiente" />
+            <TextView android:textColor="#ff000000" android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estatus" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/tv_monto_facturado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Bs XXX,yy" />
+            <TextView android:textColor="#ff000000" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monto Facturado" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/rectangulo_redondeado_negro" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" />
+</LinearLayout>
