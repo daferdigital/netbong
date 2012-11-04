@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.androidhive.dashboard.AndroidDashboardDesignActivity;
 import com.netbong.R;
 import com.netbong.fuerza.conf.EstablecerContrasena;
 
@@ -44,7 +45,11 @@ public class AutenticacionCuenta extends Activity
     {
         if(cuentaValida(((TextView)findViewById(0x7f0600d6)).getText().toString(), ((TextView)findViewById(0x7f0600d8)).getText().toString()))
         {
-            startActivity(new Intent(this, OpcionesMenuPrincial.class));
+            //startActivity(new Intent(this, OpcionesMenuPrincial.class));
+           
+        	startActivity(new Intent(this,AndroidDashboardDesignActivity.class));
+        	
+        	
             setResult(-1);
             finish();
         } else
