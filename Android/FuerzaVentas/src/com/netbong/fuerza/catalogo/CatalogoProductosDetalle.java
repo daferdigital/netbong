@@ -41,7 +41,7 @@ public class CatalogoProductosDetalle extends Activity
         CursorCatalogoImagenes cursorcatalogoimagenes = MainActivity.mDbHelper.getImagenesDeProductos(i);
         Gallery gallery = (Gallery)findViewById(0x7f060020);
         gallery.setAdapter(new PedidoAdaptarImagenesProducto(this, cursorcatalogoimagenes));
-        gallery.setOnItemClickListener(new _cls1());
+        gallery.setOnItemClickListener(new OnItemClickDetalle());
         if(cursorcatalogoimagenes.getCount() > 0)
             imageView.setImageDrawable(Drawable.createFromPath(cursorcatalogoimagenes.getImagen()));
     }
@@ -49,7 +49,7 @@ public class CatalogoProductosDetalle extends Activity
     private ImageView imageView;
 
 
-    private class _cls1
+    private class OnItemClickDetalle
         implements android.widget.AdapterView.OnItemClickListener
     {
 
@@ -60,7 +60,7 @@ public class CatalogoProductosDetalle extends Activity
 
         final CatalogoProductosDetalle this$0;
 
-        _cls1()
+        OnItemClickDetalle()
         {
         	super();
         	this$0 = CatalogoProductosDetalle.this;

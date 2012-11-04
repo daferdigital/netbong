@@ -26,8 +26,8 @@ public class CatalogoProductos extends Activity
 
     public CatalogoProductos()
     {
-        oclLineas = new _ControlLineas();
-        oclProductos = new _ControlProductos();
+        oclLineas = new OnClickLineas();
+        oclProductos = new OnClickProductos();
     }
 
     private void filtrarProductosPorLinea(int i, String s)
@@ -112,7 +112,7 @@ public class CatalogoProductos extends Activity
 
 
 
-    private class _ControlLineas
+    private class OnClickLineas
         implements android.view.View.OnClickListener
     {
 
@@ -126,7 +126,7 @@ public class CatalogoProductos extends Activity
 
         final CatalogoProductos this$0;
 
-        _ControlLineas()
+        OnClickLineas()
         {
         	super();
         	this$0 = CatalogoProductos.this;
@@ -134,7 +134,7 @@ public class CatalogoProductos extends Activity
     }
 
 
-    private class _ControlProductos
+    private class OnClickProductos
         implements android.view.View.OnClickListener
     {
 
@@ -148,7 +148,7 @@ public class CatalogoProductos extends Activity
 
         final CatalogoProductos this$0;
 
-        _ControlProductos()
+        OnClickProductos()
         {
         	super();
         	this$0 = CatalogoProductos.this;
