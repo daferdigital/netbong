@@ -53,7 +53,7 @@ public class RegistrarCancelaciones extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.registro_cancelaciones_activity_layout);
         getWindow().setLayout(600, -2);
         Bundle bundle1 = getIntent().getExtras();

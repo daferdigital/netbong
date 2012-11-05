@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import com.netbong.R;
@@ -505,7 +506,7 @@ public class PagosRegistrarNuevo extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.registrar_pagos_activity_layout);
         DBHandle.comprobanteIvaEliminar();
         findViewById(0x7f060168).setOnClickListener(oclSeleccionarCliente);

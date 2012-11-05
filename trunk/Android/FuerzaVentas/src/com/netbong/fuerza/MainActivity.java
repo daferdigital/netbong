@@ -11,6 +11,7 @@ import android.content.*;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.Window;
 import android.widget.Toast;
 import com.netbong.fuerza.conf.Configuracion;
 import com.netbong.fuerza.db.cursores.DroidSFDatabase;
@@ -216,7 +217,7 @@ public class MainActivity extends Activity
     public void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         mainCtx = this;
         settings = getPreferences(0);
         if(!settings.getBoolean("entornoConfiguado", false))

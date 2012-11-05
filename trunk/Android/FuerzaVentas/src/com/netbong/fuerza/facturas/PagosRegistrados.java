@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -42,7 +43,7 @@ public class PagosRegistrados extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.pagos_registrados_activity_layout);
         campoFiltroCliente = (EditText)findViewById(0x7f060015);
         campoFiltroCliente.addTextChangedListener(textWatcher);

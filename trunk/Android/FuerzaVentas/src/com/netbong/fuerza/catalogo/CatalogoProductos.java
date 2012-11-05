@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -86,7 +87,7 @@ public class CatalogoProductos extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.catalogo_productos_activity_layout);
         mostrarDetalle = new Intent(this, CatalogoProductosDetalle.class);
        

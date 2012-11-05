@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import com.netbong.R;
@@ -132,7 +133,7 @@ public class PedidoSeleccionProducto extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.pedido_seleccion_producto_layout);
         imageView = (ImageView)findViewById(0x7f06011c);
         ((Button)findViewById(0x7f06012e)).setOnClickListener(agregarProductoAlCarrito);

@@ -9,6 +9,7 @@ import com.netbong.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 
 public class SeleccionarFecha extends Activity
@@ -23,7 +24,7 @@ public class SeleccionarFecha extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.seleccionar_fecha_activity_layout);
         findViewById(0x7f060018).setOnClickListener(oclRegresar);
         findViewById(0x7f06017f).setOnClickListener(oclAceptar);

@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ public class ModificarEliminarArticulo extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ver_detalle_carrito_activity_layout);
         setContentView(R.layout.modificar_eliminar_articulo_activity_layout);
         Bundle bundle1 = getIntent().getExtras();

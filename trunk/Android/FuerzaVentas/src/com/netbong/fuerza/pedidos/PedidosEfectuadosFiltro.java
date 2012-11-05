@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -35,7 +36,7 @@ public class PedidosEfectuadosFiltro extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.pedidos_efectuados_filtro_activity_layout);
         ((ImageButton)findViewById(0x7f0600b1)).setOnClickListener(oclAceptar);
         ((ImageButton)findViewById(0x7f060018)).setOnClickListener(oclCancelar);

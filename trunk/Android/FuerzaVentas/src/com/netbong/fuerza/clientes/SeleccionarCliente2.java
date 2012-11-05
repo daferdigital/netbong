@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -51,7 +52,7 @@ public class SeleccionarCliente2 extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.seleccion_cliente_actvity_layout);
         getWindow().setLayout(-1, -1);
         lv = (ListView)findViewById(0x7f060050);

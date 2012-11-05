@@ -9,6 +9,7 @@ import com.netbong.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 public class PagosVistaImpresa extends Activity
@@ -23,7 +24,7 @@ public class PagosVistaImpresa extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.pagos_vista_impresa_activity_layout);
         Bundle bundle1 = getIntent().getExtras();
         if(bundle1 != null)

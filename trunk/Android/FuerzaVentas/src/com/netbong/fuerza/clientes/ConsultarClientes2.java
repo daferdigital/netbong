@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class ConsultarClientes2 extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.consultar_clientes_activity_layout);
         lv = (ListView)findViewById(0x7f060050);
         campoFiltro = (TextView)findViewById(0x7f060015);

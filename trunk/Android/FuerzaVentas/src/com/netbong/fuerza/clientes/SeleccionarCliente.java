@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -56,7 +57,7 @@ public class SeleccionarCliente extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.seleccion_cliente_actvity_layout);
         lv = (ListView)findViewById(0x7f060050);
         cc = MainActivity.mDbHelper.getListadoClientes(com.netbong.fuerza.db.cursores.CursorClientes.SortBy.nombre);

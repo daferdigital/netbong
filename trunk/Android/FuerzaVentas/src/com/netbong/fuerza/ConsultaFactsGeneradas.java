@@ -10,6 +10,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import com.netbong.R;
@@ -164,7 +165,7 @@ public class ConsultaFactsGeneradas extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.consulta_facturas_generados_layout);
         oclViewClientesFacturas = new _cls1();
         oclViewFacturas = new _cls2();

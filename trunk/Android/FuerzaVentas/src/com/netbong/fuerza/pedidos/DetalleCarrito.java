@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -255,7 +256,7 @@ public class DetalleCarrito extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ver_detalle_carrito_activity_layout);
         articulosCarrito = MainActivity.mDbHelper.getListadoArticulosCarritoPedido();
         Bundle bundle1 = getIntent().getExtras();

@@ -7,6 +7,7 @@ package com.netbong.fuerza.facturas;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -45,7 +46,7 @@ public class PagosRegistrarComprobante extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.registrar_pagos_comprobante_activity_layout);
         findViewById(0x7f06016e).setOnClickListener(oclGuardarComprobante);
         findViewById(0x7f060018).setOnClickListener(oclRegresar);

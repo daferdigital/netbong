@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import com.netbong.R;
@@ -411,7 +412,7 @@ public class FichaCliente extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ficha_cliente_activity_layout);
         Bundle bundle1 = getIntent().getExtras();
         if(bundle1 != null)

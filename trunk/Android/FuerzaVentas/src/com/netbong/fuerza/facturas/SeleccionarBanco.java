@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -31,7 +32,7 @@ public class SeleccionarBanco extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.reg_pago_selecc_banco_actvity_layout);
         ListView listview = (ListView)findViewById(0x7f060153);
         listview.setAdapter(new BancosGenerales(this, CsrBancos.getBancos(), oclSeleccionarBanco));
