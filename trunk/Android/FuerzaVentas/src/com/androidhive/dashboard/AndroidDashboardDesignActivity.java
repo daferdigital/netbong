@@ -4,17 +4,26 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import com.netbong.R;
 import com.netbong.fuerza.MainActivity;
+import com.netbong.fuerza.catalogo.CatalogoProductos;
 import com.netbong.fuerza.clientes.ConsultarClientes;
+import com.netbong.fuerza.conf.Configuracion;
+import com.netbong.fuerza.facturas.FacturasGeneradas;
+import com.netbong.fuerza.pedidos.PedidosEfectuados;
+import com.netbong.fuerza.sincronizar.SyncActivity;
 
 public class AndroidDashboardDesignActivity extends Activity {
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dashboard_layout);
+        
         
         /**
          * Creating all buttons instances
@@ -47,8 +56,9 @@ public class AndroidDashboardDesignActivity extends Activity {
 			@Override
 			public void onClick(View view) {
 				// Launching News Feed Screen
-				Intent i = new Intent(getApplicationContext(), NewsFeedActivity.class);
-				startActivity(i);
+//				Intent i = new Intent(getApplicationContext(), NewsFeedActivity.class);
+//				startActivity(i);
+				startActivity(new Intent(MainActivity.mainCtx, PedidosEfectuados.class)); 
 			}
 		});
         
@@ -72,8 +82,13 @@ public class AndroidDashboardDesignActivity extends Activity {
 			@Override
 			public void onClick(View view) {
 				// Launching News Feed Screen
-				Intent i = new Intent(getApplicationContext(), MessagesActivity.class);
-				startActivity(i);
+				//Intent i = new Intent(getApplicationContext(), MessagesActivity.class);
+				//startActivity(i);
+				startActivity(new Intent(MainActivity.mainCtx, FacturasGeneradas.class));
+				
+				
+				
+				
 			}
 		});
         
@@ -83,8 +98,11 @@ public class AndroidDashboardDesignActivity extends Activity {
 			@Override
 			public void onClick(View view) {
 				// Launching News Feed Screen
-				Intent i = new Intent(getApplicationContext(), PlacesActivity.class);
-				startActivity(i);
+				//Intent i = new Intent(getApplicationContext(), PlacesActivity.class);
+				//startActivity(i);
+				 startActivity(new Intent(MainActivity.mainCtx, CatalogoProductos.class));
+				
+				
 			}
 		});
         
@@ -94,8 +112,10 @@ public class AndroidDashboardDesignActivity extends Activity {
 			@Override
 			public void onClick(View view) {
 				// Launching News Feed Screen
-				Intent i = new Intent(getApplicationContext(), EventsActivity.class);
-				startActivity(i);
+/*				Intent i = new Intent(getApplicationContext(), EventsActivity.class);
+				startActivity(i);*/
+				startActivity(new Intent(MainActivity.mainCtx, SyncActivity.class));
+				
 			}
 		});
         
@@ -105,8 +125,12 @@ public class AndroidDashboardDesignActivity extends Activity {
 			@Override
 			public void onClick(View view) {
 				// Launching News Feed Screen
-				Intent i = new Intent(getApplicationContext(), PhotosActivity.class);
-				startActivity(i);
+/*				Intent i = new Intent(getApplicationContext(), PhotosActivity.class);
+				startActivity(i);*/
+				startActivity(new Intent(MainActivity.mainCtx, Configuracion.class));
+				
+				
+				
 			}
 		});
     }

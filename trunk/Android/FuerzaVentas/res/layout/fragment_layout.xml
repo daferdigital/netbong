@@ -9,41 +9,42 @@
         android:id="@+id/btn_news_feed"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_newsfeed"
-        android:text="News Feed" />
+        android:text="Pedidos" />
     
 	<!--  Friends Button -->
     <Button
         android:id="@+id/btn_friends"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_friends"
-        android:text="Friends" />
+        android:text="Clientes" />
     
 	<!--  Messages Button -->
     <Button
         android:id="@+id/btn_messages"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_messages"
-        android:text="Messages" />
+        android:text="Cobros" />
 	
     <!--  Places Button -->
     <Button
         android:id="@+id/btn_places"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_places"
-        android:text="Places" />
+        android:text="Productos" />
 
     <!--  Events Button -->
+
     <Button
         android:id="@+id/btn_events"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_events"
-        android:text="Events" />
+        android:text="Sincronizar" />
 
     <!--  Photos Button -->
-    <Button
+    <Button
         android:id="@+id/btn_photos"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/btn_photos"
-        android:text="Photos" />
+        android:text="Configuracion" />
 
 </com.androidhive.dashboard.DashboardLayout>

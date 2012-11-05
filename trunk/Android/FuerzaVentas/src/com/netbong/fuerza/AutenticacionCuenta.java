@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.androidhive.dashboard.AndroidDashboardDesignActivity;
@@ -61,7 +62,9 @@ public class AutenticacionCuenta extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+      //Quitamos barra de titulo de la aplicacion
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+       // requestWindowFeature(1);
         setContentView(R.layout.login_layout);
         if(!passwordEstablecido())
             startActivity(new Intent(this, EstablecerContrasena.class));
