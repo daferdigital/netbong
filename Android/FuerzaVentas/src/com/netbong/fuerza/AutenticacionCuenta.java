@@ -64,7 +64,7 @@ public class AutenticacionCuenta extends Activity
         super.onCreate(bundle);
       //Quitamos barra de titulo de la aplicacion
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-       // requestWindowFeature(1);
+       // requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.login_layout);
         if(!passwordEstablecido())
             startActivity(new Intent(this, EstablecerContrasena.class));

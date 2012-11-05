@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 // Referenced classes of package com.ehp.droidsf:
@@ -25,7 +26,7 @@ public class Login extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.login_layout);
         i = new Intent(this, OpcionesMenuPrincial.class);
         ((Button)findViewById(0x7f0600d9)).setOnClickListener(new _cls1());

@@ -8,6 +8,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -30,7 +31,7 @@ public class ConsultarFacturasPopupDialogMenu extends ListActivity
     public void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setListAdapter(new ArrayAdapter(this, 0x1090003, opciones));
         Bundle bundle1 = getIntent().getExtras();
         if(bundle1 != null)

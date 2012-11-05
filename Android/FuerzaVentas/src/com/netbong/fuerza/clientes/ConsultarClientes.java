@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -41,7 +42,9 @@ public class ConsultarClientes extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //Quitamos barra de titulo de la aplicacion
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.consultar_clientes_activity_layout);
         lv = (ListView)findViewById(0x7f060050);
         campoFiltro = (TextView)findViewById(0x7f060015);

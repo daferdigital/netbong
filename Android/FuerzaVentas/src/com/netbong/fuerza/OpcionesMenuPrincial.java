@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -127,7 +128,7 @@ public class OpcionesMenuPrincial extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.opciones_menu_principal);
         findViewById(0x7f0600e4).setOnClickListener(this);
         findViewById(0x7f0600e6).setOnClickListener(this);

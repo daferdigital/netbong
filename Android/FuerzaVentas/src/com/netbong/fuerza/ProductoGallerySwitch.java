@@ -12,6 +12,7 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.*;
 
 public class ProductoGallerySwitch extends Activity
@@ -71,7 +72,7 @@ public class ProductoGallerySwitch extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.pedido_seleccion_producto_layout);
         setContentView(R.layout.pedido_gallery_switch_producto);
         Gallery gallery = (Gallery)findViewById(0x7f06010f);

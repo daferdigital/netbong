@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import com.netbong.R;
@@ -225,7 +226,7 @@ public class SyncActivity extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.sync_activity_ly);
         mly = (LinearLayout)findViewById(0x7f06018d);
         findViewById(0x7f060011).setOnClickListener(oclCancelar);

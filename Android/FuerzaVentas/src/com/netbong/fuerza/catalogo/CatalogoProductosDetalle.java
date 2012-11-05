@@ -30,7 +30,7 @@ public class CatalogoProductosDetalle extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.catalogo_productos_detalle_activity_layout);
         getWindow().setLayout(650, 650);
         imageView = (ImageView)findViewById(0x7f06001f);

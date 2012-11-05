@@ -1,45 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#ffe3e7ea"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fe"
     android:orientation="vertical"
-    android:padding="4.0dip" >
+    android:weightSum="1" >
+
+    <include layout="@layout/actionbar_layout" />
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4.0dip"
-        >
+        android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/textView01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginRight="4.0dip"
-            android:text="Cliente:"
-            android:textColor="#ff000000"
-            android:textStyle="bold" />
-
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Cliente Filtro:"
+            android:textColor="@color/naranja_fuete"
+            android:textSize="@dimen/padding_large" />
+
         <EditText
             android:id="@id/ed_filtro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0"
-            android:textColor="@color/azul_claro2_fuente" >
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/naranja_fuete"
+            android:textColorHint="@color/azul_rey"
+            android:textSize="@dimen/padding_large"
+            android:textStyle="normal"
+            android:typeface="sans" >
 
             <requestFocus />
         </EditText>
     </LinearLayout>
-
-    <ListView
-        android:id="@id/lv_clientes"
-        style="@style/AppTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_margin="4.0dip" 
-        
-        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.07"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@id/lv_clientes"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_gravity="center_horizontal"
+            layout="@layout/footer_layout" />
+    </LinearLayout>
 
 </LinearLayout>

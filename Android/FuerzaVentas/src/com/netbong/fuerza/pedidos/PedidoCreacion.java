@@ -12,6 +12,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
@@ -342,7 +343,7 @@ public class PedidoCreacion extends Activity
         int i;
         i = 0;
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.pedido_layout);
         crearAccionesToolbar();
         rbTipoFiltroCodigo = (RadioButton)findViewById(0x7f06013d);

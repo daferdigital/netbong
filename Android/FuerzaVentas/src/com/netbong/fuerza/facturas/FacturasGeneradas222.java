@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -87,7 +88,7 @@ public class FacturasGeneradas222 extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.consulta_facturas_generadas_activity_layout);
         findViewById(0x7f06003b).setOnClickListener(oclRegistrarCancelacion);
         findViewById(0x7f06003a).setOnClickListener(oclRegistrarDevoluciones);

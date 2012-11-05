@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import com.netbong.R;
@@ -174,7 +175,7 @@ public class PedidoResumen extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ver_informacion_pedido_activity_layout);
         contenido = (LinearLayout)findViewById(0x7f060002);
         findViewById(0x7f06019d).setOnClickListener(oclSincronizar);

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -36,7 +37,7 @@ public class SeleccionarLineaProducto extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.seleccion_linea_producto_activity_layout);
         findViewById(0x7f060018).setOnClickListener(cancelar);
         findViewById(0x7f06017e).setOnClickListener(aceptar);

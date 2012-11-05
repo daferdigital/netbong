@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.*;
 
 import com.netbong.R;
@@ -112,7 +113,7 @@ public class Configuracion extends Activity
     protected void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.configuracion_ly);
         findViewById(0x7f060012).setOnClickListener(oclAceptar);
         findViewById(0x7f060011).setOnClickListener(oclCancelar);
