@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/FooterBar" >
-	<TextView android:text="www.facebook.com"
+	<TextView android:text="Aplicación desarrollada por NetBong, C.A – www.netbong.com ®Derechos Reservados"
 	    	android:layout_width="fill_parent"
 	    	android:layout_height="wrap_content"
 	    	android:textColor="#606060"
